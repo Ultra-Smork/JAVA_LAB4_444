@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="ScriptingJav.AppTest" time="0.172" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.188" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -56,5 +56,54 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="ScriptingJav.AppTest" time="0.074"/>
+  <testcase name="testGetIncome_DifferentStatesProduceDifferentIncome" classname="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.033">
+    <system-out><![CDATA[Another Plantation собрал урожай Corn:
+- Эффективность рабочих (30 рабочих): 450,00
+- Состояние фермы (Perfect): 300,00
+ОБЩИЙ ДОХОД: 750,00 | Новое состояние: 8750,00
+Small Farm собрал урожай Barley:
+- Эффективность рабочих (5 рабочих): 75,00
+- Состояние фермы (Rusty): 50,00
+ОБЩИЙ ДОХОД: 125,00 | Новое состояние: 1125,00
+]]></system-out>
+  </testcase>
+  <testcase name="testHireWorkers_IncreasesWorkerCount" classname="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.006">
+    <system-out><![CDATA[Нанято 5 рабочих. Всего рабочих: 25
+]]></system-out>
+  </testcase>
+  <testcase name="testToString_PlantationContainsAllData" classname="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.015"/>
+  <testcase name="testToString_OfficialFormatIsCorrect" classname="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.005"/>
+  <testcase name="testGetIncome_MultipleCallsAccumulate" classname="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.014">
+    <system-out><![CDATA[Test Plantation собрал урожай Wheat:
+- Эффективность рабочих (20 рабочих): 300,00
+- Состояние фермы (Good): 250,00
+ОБЩИЙ ДОХОД: 550,00 | Новое состояние: 5550,00
+Test Plantation собрал урожай Wheat:
+- Эффективность рабочих (20 рабочих): 300,00
+- Состояние фермы (Good): 250,00
+ОБЩИЙ ДОХОД: 550,00 | Новое состояние: 6100,00
+]]></system-out>
+  </testcase>
+  <testcase name="testToString_DifferentObjectsProduceDifferentStrings" classname="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.017"/>
+  <testcase name="testGetIncome_CalculationIsCorrect" classname="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.017">
+    <system-out><![CDATA[Test Plantation собрал урожай Wheat:
+- Эффективность рабочих (20 рабочих): 300,00
+- Состояние фермы (Good): 250,00
+ОБЩИЙ ДОХОД: 550,00 | Новое состояние: 5550,00
+]]></system-out>
+  </testcase>
+  <testcase name="testToString_CaptainContainsAllFields" classname="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.006"/>
+  <testcase name="testGetIncome_IncreasesWealth" classname="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.011">
+    <system-out><![CDATA[Test Plantation собрал урожай Wheat:
+- Эффективность рабочих (20 рабочих): 300,00
+- Состояние фермы (Good): 250,00
+ОБЩИЙ ДОХОД: 550,00 | Новое состояние: 5550,00
+]]></system-out>
+  </testcase>
+  <testcase name="testHireWorkers_MultipleHiresAccumulate" classname="ScriptingJav.ToStringIncomeHireWorkersTest" time="0.006">
+    <system-out><![CDATA[Нанято 3 рабочих. Всего рабочих: 23
+Нанято 7 рабочих. Всего рабочих: 30
+Нанято 2 рабочих. Всего рабочих: 32
+]]></system-out>
+  </testcase>
 </testsuite>

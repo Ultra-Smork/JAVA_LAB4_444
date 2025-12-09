@@ -7,7 +7,7 @@ public interface AliveInterface
     public static final Job defaultjob = Job.PLACEHOLDER;
     public static final int defaultage = -1;
     public static final boolean defaultalive = true;
-    public static final String[] Names = {"Cecilia", "Mori", "Noel", "Daniel", "Christopher", "Elizabeth", "Shaun", "Jackobs", "Mario", "David",
+    public static final String[] Names = {"Cecilia", "Mori", "Noel", "Kiara", "Christopher", "Elizabeth", "Shaun", "Jackob", "Mario",
                                             "Michael", "Ron", "Harry", "Kiryu", "Majima", "Daigo", "Kasuga", "Tenma", "Johan", "Kanata", "Ina", "Subaru", "Kanade"};
 }
     

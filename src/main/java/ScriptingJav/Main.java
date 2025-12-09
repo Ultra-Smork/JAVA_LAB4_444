@@ -53,5 +53,30 @@ public class Main {
 
         // coffers.deposit(plantation.getWealth() / 3);
         // monastery.getInvested();
+        
+        // Демонстрация обработки unchecked исключения
+        System.out.println("\n=== Демонстрация обработки unchecked исключения ===");
+        try {
+            // Попытка нанять отрицательное количество рабочих вызовет IllegalArgumentException
+            plantation.hireWorkers(-5);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Обработано unchecked исключение: " + e.getMessage());
+            System.out.println("Попытка нанять невалидное количество рабочих предотвращена.");
+        }
+        
+        // Попытка нанять нулевое количество рабочих
+        try {
+            plantation.hireWorkers(0);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Обработано unchecked исключение: " + e.getMessage());
+        }
+        
+        // Успешный вызов с валидным значением
+        try {
+            plantation.hireWorkers(10);
+            System.out.println("Успешно нанято 10 рабочих.");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Неожиданное исключение: " + e.getMessage());
+        }
     }
 }

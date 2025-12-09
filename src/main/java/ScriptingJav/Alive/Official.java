@@ -8,9 +8,9 @@ import ScriptingJav.Alive.abstraction.MoneyOwner;
 import ScriptingJav.Alive.abstraction.Person;
 import ScriptingJav.Alive.abstraction.Vibe;
 
-public final class Official extends Person implements AliveInterface, MoneyOwner{
+public class Official extends Person implements AliveInterface, MoneyOwner {
 
-    public Official(){
+    public Official() {
         this.job = Job.Official;
         genAge();
         genName();

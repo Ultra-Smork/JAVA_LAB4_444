@@ -7,13 +7,9 @@ import ScriptingJav.Alive.abstraction.Job;
 import ScriptingJav.Alive.abstraction.Person;
 import ScriptingJav.Alive.abstraction.Vibe;
 
-public class MonkHousekeeper extends Person implements AliveInterface{
+public final class MonkHousekeeper extends Person implements AliveInterface{
 
-    // @Override
-    // protected void genInteraction() {
-    //     // TODO Auto-generated method stub
-    //     throw new UnsupportedOperationException("Unimplemented method 'genInteraction'");
-    // }
+
     public MonkHousekeeper(){
         this.job = Job.MonasticHousekeeper;
         genAge();

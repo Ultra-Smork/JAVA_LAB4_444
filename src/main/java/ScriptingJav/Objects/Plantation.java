@@ -102,6 +102,12 @@ public class Plantation implements PropertyInterface {
     }
     
     public void hireWorkers(int count) {
+        // Валидация: выбрасываем unchecked исключение при невалидных значениях
+        if (count <= 0) {
+            throw new IllegalArgumentException(
+                String.format("Количество нанимаемых рабочих должно быть положительным числом. Получено: %d", count)
+            );
+        }
         this.data = new PlantationData(
             data.name(), data.size(), data.state(), data.cropType(),
             data.yieldPerAcre(), data.workersCount() + count, data.wealth()
